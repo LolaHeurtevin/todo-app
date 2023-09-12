@@ -38,32 +38,6 @@
             <!-- Les tâches seront affichées ici -->
         </ul>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const taskForm = document.getElementById("task-form");
-            const taskList = document.getElementById("task-list");
 
-            taskForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const taskInput = document.getElementById("task");
-                const taskText = taskInput.value.trim();
-
-                if (taskText !== "") {
-                    const li = document.createElement("li");
-                    li.innerHTML = `
-                        <span>${taskText}</span>
-                        <button class="delete-button">Supprimer</button>
-                    `;
-                    taskList.appendChild(li);
-                    taskInput.value = "";
-
-                    const deleteButton = li.querySelector(".delete-button");
-                    deleteButton.addEventListener("click", function () {
-                        li.remove();
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
