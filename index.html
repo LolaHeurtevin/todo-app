@@ -40,6 +40,10 @@
             <!-- Les tâches seront affichées ici -->
         </ul>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const taskForm = document.getElementById("task-form");
+            const taskList = document.getElementById("task-list");
 
             taskForm.addEventListener("submit", function (e) {
                 e.preventDefault();
